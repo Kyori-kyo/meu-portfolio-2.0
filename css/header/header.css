@@ -1,0 +1,101 @@
+:root {
+    --color1: #BA1F33;
+    margin: 0 1.5rem 0;
+}
+
+/* Images */
+img {
+    width: 100%;
+    height: auto;
+}
+
+h1 {
+    font: 700 2rem 'Fira Code', monospace;
+    color: black;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Header */
+#header {
+    background-color: #fff;
+    border-bottom: 1px solid #e4e4e4;
+    
+}
+
+/* Nav */
+#header .navigation {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    height: 4.5rem;
+    font: 700 2.0rem 'Fira Code', monospace;
+}
+
+/* Logo */
+#header .navigation .logo {
+    color: black;
+}
+
+#header .navigation .logo span {
+    color: var(--color1);
+}
+
+/* Menu */
+#header .navigation .menu {
+    color: var(--color1);
+}
+
+
+.grid {
+    display: grid;
+    gap: 2rem;
+}
+
+.section {
+    padding: 5rem 0;
+}
+
+/* Home */
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+#home .text {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    text-align: center;
+}
+
+#home .text h1 {
+    margin-bottom: 1rem;
+}
+
+#home .text p {
+    margin-bottom: 2rem;
+}
+
+#home .banner {
+    background-color: black;
+    width: 100%;
+    height: auto;
+}
+
+#home .banner-content {
+    position: relative;  
+    font-size: 0.5em;
+    letter-spacing: -0.05em;
+    line-height: 0.7em;
+    background: url(../../assets/imgs/kenshi.jpg);
+    background-blend-mode: color-dodge;
+    background-position-x: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
