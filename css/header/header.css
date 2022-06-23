@@ -3,6 +3,61 @@
     margin: 0 1.5rem 0;
 }
 
+/* debug de css */
+/* * {
+    outline: 2px dotted red
+}
+
+* * {
+    outline: 2px dotted green
+}
+
+* * * {
+    outline: 2px dotted orange
+}
+
+* * * * {
+    outline: 2px dotted blue
+}
+
+* * * * * {
+    outline: 1px solid red
+}
+
+* * * * * * {
+    outline: 1px solid green
+}
+
+* * * * * * * {
+    outline: 1px solid orange
+}
+
+* * * * * * * * {
+    outline: 1px solid blue
+} */
+
+/* box-sizing */
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Hide scrollbar */
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+    background-color: #EEEEEE;
+}
+
 /* Images */
 img {
     width: 100%;
@@ -17,9 +72,9 @@ h1 {
 
 /* Header */
 #header {
-    background-color: #fff;
+    background-color: #EEEEEE;
     border-bottom: 1px solid #e4e4e4;
-    
+
 }
 
 /* Nav */
@@ -46,14 +101,18 @@ h1 {
     color: var(--color1);
 }
 
-
 .grid {
     display: grid;
     gap: 2rem;
 }
 
 .section {
-    padding: 5rem 0;
+    padding: 2rem 0;
+}
+
+.section-2 {
+    display: flex;
+
 }
 
 /* Home */
@@ -86,8 +145,8 @@ h1 {
 }
 
 #home .banner-content {
-    position: relative;  
-    font-size: 0.5em;
+    position: relative;
+    font-size: 1.2vw;
     letter-spacing: -0.05em;
     line-height: 0.7em;
     background: url(../../assets/imgs/kenshi.jpg);
@@ -98,4 +157,169 @@ h1 {
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-  }
+}
+
+#home .banner-main-title {
+    font-size: 40px;
+    color: #EEEEEE;
+}
+
+#home .banner-title {
+    font-size: 25px;
+    color: #EEEEEE;
+}
+
+#home .centralized-titles {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-top: 13%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+}
+
+#sec2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+#sec2 .carrossel {
+    width: 80vw;
+    height: 60vh;
+    position: relative;
+    background-color: rgba(209, 209, 209, 0.404);
+    border-radius: 10px;
+}
+
+#sec2 .carrossel>ul {
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+
+#sec2 .slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: 200ms opacity ease-in-out;
+    transition-delay: 200ms;
+}
+
+#sec2 .slide[data-active] {
+    opacity: 1;
+    transition-delay: 0ms;
+    z-index: 2;
+}
+
+#sec2 .slide>img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+#sec2 .button-carrossel {
+    position: absolute;
+    background: none;
+    border: none;
+    font-size: 4rem;
+    top: 50%;
+    z-index: 3;
+    color: #BA1F33;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, .1);
+    border-radius: 8px;
+    padding: 0 5rem;
+}
+
+#sec2 .button-carrossel:hover,
+.button-carrossel:focus {
+    color: white;
+    background-color: rgba(0, 0, 0, .2);
+}
+
+#sec2 .button-carrossel:focus {
+    outline: 1px solid #000;
+}
+
+#sec2 .button-carrossel.prev {
+    left: -7rem;
+}
+
+#sec2 .button-carrossel.next {
+    right: -7rem;
+
+
+}
+
+li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* slides */
+
+.section-block {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    padding: 30px;
+    width: 40%;
+    border: 0.5px solid #CC5F00;
+    border-radius: 50px;
+    background: linear-gradient(145deg, #121212, #202020);
+    box-shadow: 20px 20px 60px #121212,
+        -20px -20px 60px #202020;
+}
+
+.block {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#result {
+    border: 1px solid #CC5F00;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+input {
+    background-color: #EEEEEE;
+    border-radius: 5px;
+    border: 1px solid #CC5F00;
+    padding: 5px;
+}
+
+.resultado {
+    display: flex;
+    align-content: flex-start;
+    align-items: center;
+}
+
+.button {
+    background-color: #222831;
+    color: #EEEEEE;
+    padding-bottom: 26px;
+    width: 100%;
+    height: 30px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 2px solid #CC5F00;
+    cursor: pointer;
+}
